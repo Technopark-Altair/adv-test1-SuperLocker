@@ -4,9 +4,9 @@
     grid-template-areas:
     "a c b d"
     "e e e e"
-    "f f f f"
-    "h h h h";
-    grid-template-columns: 25% 25% 25% 25%;
+    "f f f f";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
     margin-top: 2em;
     padding-bottom: 50px;
 }
@@ -33,23 +33,7 @@
 .graph{ 
     grid-area: e; 
     }
-.Submit { 
+.routlet { 
     grid-area: f; 
+    grid-row: 100%;
     } 
-.Result { 
-    grid-area: g; 
-    } 
-.Otric { 
-
-    grid-area: h;
-    color:black;
-    } 
-.Failure{
-    grid-area:i ;
-    }
-.Skobka{
-    grid-area:j;
-    }
-.Skobkaa{
-    grid-area:k;
-    }

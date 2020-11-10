@@ -30,4 +30,18 @@ export class FormComponent {
     }
     
   }
+  public article: object;
+  provider:string;
+  city: string;
+  date1: string;
+  date2: string;
+  text: string;
+  error: string;
+
+  ngOnInit() {
+  }
+  addText() {
+    this.error = this.provider + '|' + this.city + '|' + this.date1 + '|' + this.date1 + '|' + this.text + '|' + this.currentRate + '-----' + '|' 
+    localStorage.setItem('articles', localStorage.getItem('articles') + this.error)
+  }
 }

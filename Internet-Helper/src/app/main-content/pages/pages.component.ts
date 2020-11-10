@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pages.component.css']
 })
 export class PagesComponent implements OnInit {
-
+  articles: Array<string>;
+  
   constructor() { }
 
   ngOnInit(): void {
+    this.articles = localStorage.getItem('articles').split('|')
   }
 
 }
