@@ -1,0 +1,55 @@
+.base{
+    color:white;
+    display: grid;
+    grid-template-areas:
+    "a c b d"
+    "e e e e"
+    "f f f f"
+    "h h h h";
+    grid-template-columns: 25% 25% 25% 25%;
+    margin-top: 2em;
+    padding-bottom: 50px;
+}
+.header{
+    font-size: 2.5em;
+    grid-area:a;
+    margin-left: 15px;
+}
+.news {
+    font-size: 2.5em;
+    grid-area: b;
+    text-align: center;
+    }
+.tut {
+    font-size: 2.5em;
+    grid-area: c;
+    text-align: center;
+    }
+.button { 
+    grid-area: d; 
+    text-align: right;
+    margin-right:10px
+    }
+.graph{ 
+    grid-area: e; 
+    }
+.Submit { 
+    grid-area: f; 
+    } 
+.Result { 
+    grid-area: g; 
+    } 
+.Otric { 
+
+    grid-area: h;
+    color:black;
+    } 
+.Failure{
+    grid-area:i ;
+    }
+.Skobka{
+    grid-area:j;
+    }
+.Skobkaa{
+    grid-area:k;
+    }

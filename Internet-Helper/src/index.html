@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <script type="text/javascript">
+    $('.scrollto a').on('click', function() {
+
+    let href = $(this).attr('href');
+
+    $('html, body').animate({
+        scrollTop: $(href).offset().top
+    }, {
+        duration: 370,   // по умолчанию «400» 
+        easing: "linear" // по умолчанию «swing» 
+    });
+
+    return false;
+  });
+  </script>
+  <meta charset="utf-8">
+  <title>Internet-Helper</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <base href="/" />
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="//api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+  <script type="text/javascript">
+        window.onload = function () {
+            jQuery("#user-city").text(ymaps.geolocation.city);
+            jQuery("#user-region").text(ymaps.geolocation.region);
+            jQuery("#user-country").text(ymaps.geolocation.country);
+        }
+  </script>
+</head>
+<body class="base">
+  <div class="city"><b>Ваш город:</b> <span id="user-city"></span></div>
+  <app-root></app-root>
+</body>
+</html>

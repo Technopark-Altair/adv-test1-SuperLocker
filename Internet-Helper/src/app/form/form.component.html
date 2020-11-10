@@ -1,0 +1,30 @@
+
+<ng-template class="form" #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Опишите проблему</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        <form >
+            <p>Провайдер:<input type="text"></p>
+            <p>В каком городе произощел сбой:<input type="text"></p>
+            <p>Дата сбоя:<input type="date"></p>
+            <p>Время сбоя:<input type="time"></p>
+            <p>Описание проблемы:<input type="text"></p>
+            <p>Оцените качество услуг провайдера:<ngb-rating [(rate)]="currentRate">
+              <ng-template let-fill="fill" let-index="index">
+                <span class="star" [class.filled]="fill === 100">&#9733;</span>
+              </ng-template>
+          </ngb-rating></p>
+          <input type="number" value={{currentRate}} style="visibility: hidden;">
+          <input type="sumbit" class="btn btn-outline-dark" (click)="modal.close('Save click')" value="Отправить">
+        </form>
+        
+    </div>
+    
+  </ng-template>
+  
+  <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Сообщить о сбое</button>
+  
