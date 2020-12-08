@@ -8,7 +8,15 @@
     </div>
     <div class="modal-body">
         <form >
-          <p>Провайдер:<input type="text" [(ngModel)]='provider' name="provider"></p>
+          <p>Провайдер:
+            <select name="provider" [(ngModel)]='provider'>
+              <option value="Ростелеком">Ростелеком</option>
+              <option value="QWERTY">QWERTY</option>
+              <option value="МГТС">МГТС</option>
+              <option value="Авокадо">Авокадо</option>
+              <option value="Спидилайн">Спидилайн</option>
+            </select>
+          </p>
           <p>В каком городе произошел сбой:<input type="text" [(ngModel)]='city' name="city"></p>
           <p>Дата сбоя:<input type="date" [(ngModel)]='date1' name="date1"></p>
           <p>Время сбоя:<input type="time" [(ngModel)]='date2' name="date2"></p>
@@ -18,7 +26,7 @@
               <span class="star" [class.filled]="fill === 100">&#9733;</span>
           </ng-template>
           </ngb-rating></p>
-          <input (click)="addText()" type="sumbit" class="btn btn-outline-dark" (click)="modal.close('Save click')" value="Отправить">
+          <input (click)="rateTo()" type="sumbit" class="btn btn-outline-dark" (click)="modal.close('Save click')" value="Отправить">
         </form>
         
     </div>

@@ -7,13 +7,13 @@ import {NgbAlertModule, NgbModule, NgbPaginationModule} from '@ng-bootstrap/ng-b
 
 import { AppComponent } from './app.component';
 import { FormComponent } from './form/form.component';
-import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { PagesComponent } from './main-content/pages/pages.component';
 import { ArticleComponent } from './main-content/article/article.component';
+import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 
 @NgModule({
   declarations: [
-    AppComponent, FormComponent, ProgressBarComponent, PagesComponent, ArticleComponent
+    AppComponent, FormComponent, PagesComponent, ArticleComponent,ProgressBarComponent
   ],
   imports: [
     BrowserModule, AppRoutingModule, NgbModule, NgbPaginationModule, NgbAlertModule, FormsModule

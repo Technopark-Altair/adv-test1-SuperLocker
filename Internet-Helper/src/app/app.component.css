@@ -19,21 +19,21 @@
     font-size: 2.5em;
     grid-area: b;
     text-align: center;
-    }
+}
 .tut {
     font-size: 2.5em;
     grid-area: c;
     text-align: center;
-    }
+}
 .button { 
     grid-area: d; 
     text-align: right;
     margin-right:10px
-    }
+}
 .graph{ 
     grid-area: e; 
-    }
+}
 .routlet { 
     grid-area: f; 
     grid-row: 100%;
-    } 
+} 

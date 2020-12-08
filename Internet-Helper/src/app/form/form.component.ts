@@ -4,7 +4,8 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
-  styleUrls: ['./form.component.css']
+  styleUrls: ['./form.component.css'],
+  inputs:['rateRostel,rateQWERTY,rateMGTS,rateSpeedy,rateAvocad']
 })
 export class FormComponent {
   currentRate = 8;
@@ -30,7 +31,6 @@ export class FormComponent {
     }
     
   }
-  public article: object;
   provider:string;
   city: string;
   date1: string;
@@ -40,8 +40,22 @@ export class FormComponent {
 
   ngOnInit() {
   }
+  rateTo() {
+    if(this.provider='Ростелеком'){
+      localStorage.setItem('rateRostel', localStorage.getItem('rateRostel') + this.currentRate)
+    }else if(this.provider='QWERTY'){
+      localStorage.setItem('rateQWERTY', localStorage.getItem('rateQWERTY') + this.currentRate)
+    }else if(this.provider='МГТС'){
+      localStorage.setItem('rateMGTS', localStorage.getItem('rateMGTS') + this.currentRate)
+    }else if(this.provider='Авокадо'){
+      localStorage.setItem('rateAvocad', localStorage.getItem('rateAvocad') + this.currentRate)
+    }else if(this.provider='Спидилайн'){
+      localStorage.setItem('rateSpeedy', localStorage.getItem('rateSpeedy') + this.currentRate)
+    }
+  }
   addText() {
-    this.error = this.provider + '|' + this.city + '|' + this.date1 + '|' + this.date1 + '|' + this.text + '|' + this.currentRate + '-----' + '|' 
-    localStorage.setItem('articles', localStorage.getItem('articles') + this.error)
+    this.error ='Провайдер: '+ this.provider + '|' + 'Город: ' + this.city + '|' + 'Дата: ' + this.date1 + '|' + 'Время: ' + this.date2 + '|' + 'Описание проблемы:' + this.text + '|' + 'Оценка:'  + this.currentRate + '|' + '--------------' + '|' 
+    localStorage.setItem('errors', localStorage.getItem('errors') + this.error)
+    
   }
 }
